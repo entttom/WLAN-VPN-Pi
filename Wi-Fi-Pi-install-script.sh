@@ -251,7 +251,8 @@ sudo apt-get install lighttpd
 sudo apt-get install php5-common php5-cgi php5
 sudo lighty-enable-mod fastcgi-php
 sudo service lighttpd restart
-cp index.php /var/www/
+sudo cp index.php /var/www/
+sudo cp sudoers /etc/sudoers/
 echo ""
 echo "#####################################################"
 echo "For details to start Internet access with or without"
