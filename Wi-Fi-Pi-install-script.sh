@@ -2,7 +2,7 @@
 
 #
 # Wi-Fi-Pi-install-script.sh
-#
+#@version 1.4 Edit bei Tom Entner
 # @version    1.3 2014-08-03
 # @copyright  Copyright (c) 2014 Martin Sauter, martin.sauter@wirelessmoves.com
 # @license    GNU General Public License v2
@@ -244,6 +244,14 @@ echo ""
 echo "#####################################################" 
 echo ""
 
+echo ""
+echo "Installiere Web Server und PHP" 
+echo ""
+sudo apt-get install lighttpd
+sudo apt-get install php5-common php5-cgi php5
+sudo lighty-enable-mod fastcgi-php
+sudo service lighttpd restart
+cp index.php /var/www/
 echo ""
 echo "#####################################################"
 echo "For details to start Internet access with or without"
